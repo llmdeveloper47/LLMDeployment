@@ -47,14 +47,38 @@ Before you begin, ensure you have the following tools installed:
 
 ## Google Cloud Setup
 
-### 1. Create a Google Cloud Account
+### 1. Installing gcloud
+
+Follow the below sequence to install google cloud sdk on your system
+1. Use https://cloud.google.com/sdk/docs/install-sdk to download the tar.gz file for your system
+2. Extract the file and place it in your root folder
+3. Follow the command to install the gcloud :
+   3.1 cd into root folder
+   3.2 Install the SDK :  ./google-cloud-sdk/install.sh in terminal, this install the sdk
+   3.3 Identify Your Shell Environment : echo $SHELL
+   3.4 Locate the Google Cloud SDK Installation Path : ~/google-cloud-sdk
+   3.5 Update Your Shell Configuration :
+       Depending on your shell, you’ll need to add the SDK’s bin directory to your PATH by editing the appropriate configuration file.
+       For Zsh Users:
+       nano ~/.zshrc
+       # The next line updates PATH for the Google Cloud SDK.
+       source "$HOME/google-cloud-sdk/path.zsh.inc"
+       # The next line enables shell command completion for gcloud.
+       source "$HOME/google-cloud-sdk/completion.zsh.inc"
+   3.6 Save and close the file
+   3.7 source ~/.zshrc
+   3.8 Verify Installation : which gcloud
+   3.9 Check Version : gcloud --version
+   
+
+### 2. Create a Google Cloud Account
 
 1. Visit [cloud.google.com](https://cloud.google.com)
 2. Click "Get started for free" or "Sign in"
 3. Follow the prompts to create a new account or sign in
 4. Set up billing information (you may be eligible for free credits)
 
-### 2. Create a New GCP Project
+### 3. Create a New GCP Project
 
 ```bash
 # Create a new project
@@ -67,7 +91,7 @@ gcloud config set project llm-deployment-project
 gcloud config get-value project
 ```
 
-### 3. Enable Required APIs
+### 4. Enable Required APIs
 
 ```bash
 # Enable required Google Cloud APIs
@@ -81,7 +105,7 @@ gcloud services enable iam.googleapis.com
 gcloud services enable cloudresourcemanager.googleapis.com
 ```
 
-### 4. Create a Service Account for Terraform
+### 5. Create a Service Account for Terraform
 
 ```bash
 # Create a service account for Terraform
