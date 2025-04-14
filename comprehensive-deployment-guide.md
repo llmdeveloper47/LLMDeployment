@@ -90,10 +90,10 @@ Follow the below sequence to install google cloud sdk on your system
 
 ```bash
 # Create a new project on googlc cloud console, eg : llm-deployment-project-456723
-# assume the project created by google cloud is llm-deployment-project-456723-456723
+# assume the project created by google cloud is llm-deployment-project-456723
 
 # Set the project as your default
-gcloud config set project llm-deployment-project-456723-456723
+gcloud config set project llm-deployment-project-456723
 
 # Verify project ID
 gcloud config get-value project
@@ -122,29 +122,29 @@ gcloud iam service-accounts create terraform-admin \
     --display-name="Terraform Admin"
 
 # Grant necessary roles to the service account
-gcloud projects add-iam-policy-binding llm-deployment-project-456723-456723 \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --member="serviceAccount:terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com" \
     --role="roles/compute.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project-456723-456723 \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --member="serviceAccount:terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com" \
     --role="roles/container.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project-456723-456723 \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --member="serviceAccount:terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com" \
     --role="roles/storage.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project-456723-456723 \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --member="serviceAccount:terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com" \
     --role="roles/iam.serviceAccountUser"
 
-gcloud projects add-iam-policy-binding llm-deployment-project-456723-456723 \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --member="serviceAccount:terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com" \
     --role="roles/resourcemanager.projectIamAdmin"
 
 # Create and download a key for the service account
 gcloud iam service-accounts keys create terraform-admin-key.json \
-    --iam-account=terraform-admin@llm-deployment-project-456723-456723.iam.gserviceaccount.com
+    --iam-account=terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com
 ```
 
 Make sure to store this key file securely. You'll use it for Terraform authentication.
@@ -156,9 +156,7 @@ Make sure to store this key file securely. You'll use it for Terraform authentic
 ```bash
 # Clone your repository (replace with your actual repository URL)
 git clone https://github.com/yourusername/llm-gke-deployment.git
-# git clone https://github.com/llmdeveloper47/LLMDeployment.git
 cd llm-gke-deployment
-# cd LLMDeployment
 ```
 
 ### 2. Configure Terraform Variables
@@ -166,7 +164,7 @@ cd llm-gke-deployment
 Create or edit `terraform/terraform.tfvars` with your specific values:
 
 ```hcl
-project_id     = "llm-deployment-project-456723-456723"
+project_id     = "llm-deployment-project-456723"
 region         = "us-central1"
 gke_num_nodes  = 2
 machine_type   = "n2-standard-8"
