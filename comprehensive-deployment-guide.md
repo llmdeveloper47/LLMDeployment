@@ -122,29 +122,29 @@ gcloud iam service-accounts create terraform-admin \
     --display-name="Terraform Admin"
 
 # Grant necessary roles to the service account
-gcloud projects add-iam-policy-binding llm-deployment-project \
-    --member="serviceAccount:terraform-admin@llm-deployment-project.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com" \
     --role="roles/compute.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project \
-    --member="serviceAccount:terraform-admin@llm-deployment-project.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723t.iam.gserviceaccount.com" \
     --role="roles/container.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project \
-    --member="serviceAccount:terraform-admin@llm-deployment-project.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com" \
     --role="roles/storage.admin"
 
-gcloud projects add-iam-policy-binding llm-deployment-project \
-    --member="serviceAccount:terraform-admin@llm-deployment-project.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com" \
     --role="roles/iam.serviceAccountUser"
 
-gcloud projects add-iam-policy-binding llm-deployment-project \
-    --member="serviceAccount:terraform-admin@llm-deployment-project.iam.gserviceaccount.com" \
+gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com" \
     --role="roles/resourcemanager.projectIamAdmin"
 
 # Create and download a key for the service account
 gcloud iam service-accounts keys create terraform-admin-key.json \
-    --iam-account=terraform-admin@llm-deployment-project.iam.gserviceaccount.com
+    --iam-account=terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com
 ```
 
 Make sure to store this key file securely. You'll use it for Terraform authentication.
