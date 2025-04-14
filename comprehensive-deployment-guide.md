@@ -156,7 +156,9 @@ Make sure to store this key file securely. You'll use it for Terraform authentic
 ```bash
 # Clone your repository (replace with your actual repository URL)
 git clone https://github.com/yourusername/llm-gke-deployment.git
+# git clone https://github.com/llmdeveloper47/LLMDeployment.git
 cd llm-gke-deployment
+# cd LLMDeployment
 ```
 
 ### 2. Configure Terraform Variables
