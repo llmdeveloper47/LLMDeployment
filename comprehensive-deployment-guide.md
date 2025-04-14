@@ -89,11 +89,11 @@ Follow the below sequence to install google cloud sdk on your system
 ### 3. Create a New GCP Project
 
 ```bash
-# Create a new project
-gcloud projects create llm-deployment-project --name="LLM Deployment"
+# Create a new project on googlc cloud console, eg : llm-deployment-project
+# assume the project created by google cloud is llm-deployment-project-456723
 
 # Set the project as your default
-gcloud config set project llm-deployment-project
+gcloud config set project llm-deployment-project-456723
 
 # Verify project ID
 gcloud config get-value project
