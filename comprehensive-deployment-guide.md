@@ -790,6 +790,13 @@ kubectl get svc llm-inference -o yaml | grep -A5 selector
 kubectl get pods --show-labels
 ```
 
+## Application
+### How to Run the Streaming Demo
+ - Install required dependencies: pip install streamlit requests sseclient-py pandas plotly
+ - Set the API endpoint environment variable: For Linux/macOS : export API_ENDPOINT="http://your-gke-service-ip" | For Windows : set API_ENDPOINT=http://your-gke-service-ip
+ - Start the Streamlit app: streamlit run demo/streaming_demo.py
+
+
 ---
 
 Congratulations! You've now set up a complete MLOps pipeline for LLM deployment on GKE. This solution provides infrastructure as code, containerization, streaming inference, blue-green deployments, and performance optimization through quantization.
