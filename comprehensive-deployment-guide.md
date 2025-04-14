@@ -54,10 +54,15 @@ Follow the below sequence to install google cloud sdk on your system
 2. Extract the file and place it in your root folder
 3. Follow the command to install the gcloud :
    3.1 cd into root folder
+   
    3.2 Install the SDK :  ./google-cloud-sdk/install.sh in terminal, this install the sdk
+   
    3.3 Identify Your Shell Environment : echo $SHELL
+   
    3.4 Locate the Google Cloud SDK Installation Path : ~/google-cloud-sdk
+   
    3.5 Update Your Shell Configuration :
+   
        Depending on your shell, you’ll need to add the SDK’s bin directory to your PATH by editing the appropriate configuration file.
        For Zsh Users:
        nano ~/.zshrc
@@ -66,8 +71,11 @@ Follow the below sequence to install google cloud sdk on your system
        # The next line enables shell command completion for gcloud.
        source "$HOME/google-cloud-sdk/completion.zsh.inc"
    3.6 Save and close the file
+   
    3.7 source ~/.zshrc
+   
    3.8 Verify Installation : which gcloud
+   
    3.9 Check Version : gcloud --version
    
 
