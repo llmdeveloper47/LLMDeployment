@@ -127,7 +127,7 @@ gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
     --role="roles/compute.admin"
 
 gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
-    --member="serviceAccount:terraform-admin@llm-deployment-project-456723t.iam.gserviceaccount.com" \
+    --member="serviceAccount:terraform-admin@llm-deployment-project-456723.iam.gserviceaccount.com" \
     --role="roles/container.admin"
 
 gcloud projects add-iam-policy-binding llm-deployment-project-456723 \
