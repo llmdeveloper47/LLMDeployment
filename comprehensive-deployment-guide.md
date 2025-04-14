@@ -19,6 +19,7 @@ This comprehensive guide provides detailed, step-by-step instructions for deploy
 13. [Cost Management](#cost-management)
 14. [Cleanup Process](#cleanup-process)
 15. [Troubleshooting](#troubleshooting)
+16. [Streamlit Application](#application)
 
 ## Overview
 
