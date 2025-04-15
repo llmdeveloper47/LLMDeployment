@@ -210,7 +210,10 @@ machine_type   = "n2-standard-8"
 cd terraform
 
 # Set environment variable for authentication
-Place the terraform-admin-key.json in the root folder of the application or even in the terraform folder. Just make sure not to commit this file to github.
+Place the terraform-admin-key.json in the root folder of the application or even in the terraform folder.
+Just make sure not to commit this file to github.
+
+
 export GOOGLE_APPLICATION_CREDENTIALS="../terraform-admin-key.json"
 
 # Initialize Terraform
