@@ -149,6 +149,36 @@ gcloud iam service-accounts keys create terraform-admin-key.json \
 ```
 
 Make sure to store this key file securely. You'll use it for Terraform authentication.
+## Kubectl and Terraform Setup
+
+### PLease run the below commands to as a prerequisite to setup kubectl and terrform in your conda environment
+
+    - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+### Installing kubectl (Kubernetes CLI)
+
+1 - Install kubectl via Homebrew: brew install kubectl
+
+2 - Verify the Installation: kubectl version --client
+
+3 - Optional: Enable Shell Autocompletion (For ZSH): 
+echo 'source <(kubectl completion zsh)' >> ~/.zshrc
+source ~/.zshrc
+
+### Installing Terraform (v1.0.0 or Newer)
+
+1 - Add HashiCorp Tap to Homebrew:
+brew tap hashicorp/tap
+
+2 - Install Terraform:
+brew install hashicorp/tap/terraform
+
+3 - Verify the Installation:
+terraform version
+
+4 - Optional: Enable Autocompletion (for ZSH):
+terraform -install-autocomplete
+source ~/.zshrc
+
 
 ## Infrastructure Setup with Terraform
 
