@@ -210,13 +210,17 @@ machine_type   = "n2-standard-8"
 cd terraform
 
 # Set environment variable for authentication
+Place the terraform-admin-key.json in the root folder of the application or even in the terraform folder. Just make sure not to commit this file to github.
 export GOOGLE_APPLICATION_CREDENTIALS="../terraform-admin-key.json"
 
 # Initialize Terraform
 terraform init
 ```
-
-### 4. Create Execution Plan
+### 4. Login Into GCP
+```bash
+gcloud auth application-default login
+```
+### 5. Create Execution Plan
 
 ```bash
 terraform plan -out=tfplan
@@ -224,7 +228,7 @@ terraform plan -out=tfplan
 
 Review the plan to confirm the resources that will be created.
 
-### 5. Apply the Plan
+### 6. Apply the Plan
 
 ```bash
 terraform apply tfplan
@@ -238,7 +242,7 @@ This will create:
 
 The process takes approximately 10-15 minutes.
 
-### 6. Configure kubectl
+### 7. Configure kubectl
 
 ```bash
 # Get cluster credentials and configure kubectl
